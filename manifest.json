@@ -1,0 +1,59 @@
+{
+  "name": "APOESTH 官方源",
+  "source": "jsdelivr",
+  "note": "本清单可同时部署于 GitHub 与 Gitee 两个仓库，内容保持一致。",
+  "base": "https://cdn.jsdelivr.net/gh/AW-jjz/apoesth-jjz-plugins@v1.0.0/manifest.json",
+  "plugins": [
+    {
+      "id": "augment-grain",
+      "zh": "颗粒",
+      "en": "GRAIN",
+      "desc": "为全站背景叠加细微胶片颗粒，强化材质的粗粝质感。",
+      "version": "1.0.0",
+      "author": "APOESTH EXT",
+      "tag": "MOTION",
+      "css": ".cm-root::after{content:\"\";position:fixed;inset:0;pointer-events:none;z-index:1;mix-blend-mode:overlay;background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix type='saturate' values='0'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='0.5'/></svg>\");opacity:0.08}"
+    },
+    {
+      "id": "augment-index",
+      "zh": "目录清角",
+      "en": "CLEAR INDEX",
+      "desc": "把目录章的行距与描边压紧，信息密度更高、更规整。",
+      "version": "1.0.0",
+      "author": "APOESTH EXT",
+      "tag": "UI",
+      "css": ".cm-chapter--index .idx{letter-spacing:-0.02em}.cm-chapter--index .idx b{border-width:1px}"
+    },
+    {
+      "id": "augment-letter",
+      "zh": "巨型首字",
+      "en": "GIANT DROP",
+      "desc": "把章节大标题的首字母 drop-cap 放大一档，强化版式枢纽。",
+      "version": "1.0.0",
+      "author": "APOESTH EXT",
+      "tag": "UI",
+      "css": ".cm-chapter .cm-masthead .drop{font-size:calc(clamp(120px,28vw,260px)*1.15);transform:translateY(-3%)}"
+    },
+    {
+      "id": "augment-ember",
+      "zh": "原初点火",
+      "en": "IGNITE",
+      "desc": "首次进入时开场仪式动画改为极简瞬时淡入（省时强制缩短）。",
+      "version": "1.0.0",
+      "author": "APOESTH EXT",
+      "tag": "MOTION",
+      "css": ".ritual__panel{transition:none!important;animation:none!important;opacity:1!important}.ritual{pointer-events:none}"
+    },
+    {
+      "id": "skill-context-mgmt",
+      "kind": "skill",
+      "zh": "上下文管理",
+      "en": "CONTEXT MGMT",
+      "desc": "下载 SKILL.md 技能文档，落盘 IndexedDB，供 Hermes/Chat 消费，不执行脚本。",
+      "version": "1.0.0",
+      "author": "APOESTH EXT",
+      "tag": "SKILL",
+      "skillUrl": "./SKILL_SAMPLE.md"
+    }
+  ]
+}
